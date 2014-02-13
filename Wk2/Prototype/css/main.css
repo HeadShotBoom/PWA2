@@ -300,3 +300,32 @@ div.iconsright img {
     float:right;
     clear:both;
 }
+/* Modal for Projects Page */
+.modalDialog input.addproject {
+    margin:0 50px 20px 40px;
+    width:400px;
+    height:50px;
+    padding-left: 10px;
+}
+.modalDialog label {
+    margin-left:40px;
+}
+.modalDialog input.halfsize{
+    width:182px;
+    height:50px;
+    float:left;
+    margin-left:40px;
+
+
+}
+form.shiftup {
+    margin-top:-20px;
+}
+.modalDialog[alt="add"] div{
+    height:350px;
+}
+.modalDialog[alt="add"] div img{
+    height:50px;
+    width:50px;
+    float:left;
+}

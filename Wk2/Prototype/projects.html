@@ -115,25 +115,27 @@
     </ul>
     <img src="img/social.png" alt="Social Media Icons">
 </footer>
-<div id="openModal" class="modalDialog">
+<div id="openModal" class="modalDialog" alt="add">
     <div>
         <a href="#close" title="Close" class="close">X</a>
+        <img src="img/save.png" alt="save">
         <h2>Add New Project</h2>
         <form>
-            <p>Project Name</p>
-            <input type="text" class="register" required="true" placeholder="TheMostUniqueUserNameEver">
+            <label for="name">Project Name</label><br>
+            <input id="name" type="text" class="addproject">
         </form>
-        <div>
-            <p>Description</p>
-            <input type="password" class="register" required="true" placeholder="Password">
-        </div>
-        <div>
-            <p>Due Date</p>
-            <input type="email" class="register" required="true" placeholder="Email">
-        </div>
-        <div>
-            <p>Priority</p>
-        </div>
+        <form>
+            <label for="description">Desctiption</label><br>
+            <input id="description" type="text" class="addproject">
+        </form>
+        <form>
+            <label for="due">Due Date</label><br>
+            <input id="due" type="text" class="halfsize">
+        </form>
+        <form class="shiftup">
+            <label for="priority">Priority</label><br>
+            <input id="priority" type="text" class="halfsize">
+        </form>
 </div>
 </body>
 </html>
