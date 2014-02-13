@@ -1,0 +1,302 @@
+/* Formatting for all pages */
+
+body {
+    width:960px;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size:100%;
+    background-image: url(../img/light-tile.gif);
+    margin:10px auto;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'IM Fell French Canon SC', serif;
+    color:#2b3181;
+}
+
+header, footer {
+    height:100px;
+    background-color: #59A488;
+    width:100%;
+    overflow:hidden;
+}
+
+footer {
+    margin-top:20px;
+}
+
+div.login {
+    display:inline;
+    margin-left:280px;
+    margin-top:50px;
+}
+
+.login {
+    height: 30px;
+    width:140px;
+    margin:30px 20px 0 0;
+}
+
+.mainlogo {
+    height:80px;
+    width:216px;
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
+
+}
+
+input[class='medium']{
+    height:38px;
+    width:100px;
+    font-size: 100%;
+}
+
+footer ul {
+    float:left;
+    margin-left:20px;
+    margin-top:10px;
+}
+
+footer img[alt="Social Media Icons"]{
+    float:right;
+    margin-top:25px;
+    margin-right:10px;
+}
+
+section {
+    margin-left:10px;
+}
+
+h1 {
+    font-size:200%;
+}
+
+input[type='button'], input[type='submit']{
+    background:#F3A683;
+    color:#2b3181;
+    border:none;
+    box-shadow: 4px 4px 5px #888888;
+}
+
+/*MODAL BOX ALL PAGES*/
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #c11a4f;
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+/* Welcome Page  */
+
+img[alt*='Aion'] {
+    float:left;
+    height:180px;
+    width:180px;
+    margin-top:20px;
+    margin-right:20px;
+    margin-left:10px;
+}
+
+h2.intro {
+    margin-top:35px;
+    margin-bottom: 40px;
+    font-size:150%;
+}
+
+article.cta {
+    width:610px;
+    height:400px;
+    background-color: rgba(89,164,136,.7);
+    position:relative;
+}
+
+aside.join {
+    width:290px;
+    height:400px;
+    float:right;
+    margin-right:10px;
+    background-color: rgba(89,164,136,.7);
+}
+
+aside.join h1 {
+    text-align: center;
+    color:#c11a4f;
+}
+
+aside.join ul li {
+    line-height: 1.5em;
+}
+
+input[name="SIGN UP NOW!"] {
+    width:250px;
+    margin-left:20px;
+    height:50px;
+    font-size:150%;
+    font-family: 'IM Fell French Canon SC', serif;
+}
+
+#ss1, #ss2, #ss3 {
+    position: relative;
+    -webkit-transition: all 1500ms cubic-bezier(0.450, 0, 0.640, 1); /* older webkit */
+    -webkit-transition: all 1500ms cubic-bezier(0.450, -0.300, 0.640, 1.320);
+    -moz-transition: all 1500ms cubic-bezier(0.450, -0.300, 0.640, 1.320);
+    -o-transition: all 1500ms cubic-bezier(0.450, -0.300, 0.640, 1.320);
+    transition: all 1500ms cubic-bezier(0.450, -0.300, 0.640, 1.320); /* custom */
+}
+
+#ss1:hover, #ss2:hover, #ss3:hover{
+    -webkit-transform: scale(1.5, 1.5);
+    -moz-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1.5, 1.5);
+    -o-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    z-index:9999;
+}
+
+#ss1 {
+    top:20px;
+    left:20px;
+}
+
+#ss2 {
+    top:38px;
+    left:55px;
+}
+
+#ss3 {
+    top:50px;
+    left:150px;
+}
+
+/* Modal Box for Welcome Page Customizations  */
+.modalDialog div h2 {
+    text-align: center;
+}
+.modalDialog input.register {
+    margin:20px 50px 0 40px;
+    width:400px;
+    height:50px;
+    padding-left: 10px;
+}
+.modalDialog input[type=submit]{
+    background:#F3A683;
+    color:#2b3181;
+    border:none;
+    box-shadow: 4px 4px 5px #888888;
+    width:250px;
+    height:50px;
+    margin-top:20px;
+    margin-left:125px;
+    font-size:150%;
+    font-family: 'IM Fell French Canon SC', serif;
+    box-shadow: 4px 4px 5px #444444;
+}
+
+/* Projects page  */
+header h1.title {
+    position:relative;
+    top:30px;
+    left:190px;
+}
+section input[name="New Project +"].medium {
+    float:left;
+    margin-right:250px;
+    width:150px;
+}
+article.projects {
+    width:920px;
+    height:130px;
+    background-color: #9DD672;
+    padding:10px;
+    overflow:hidden;
+    margin-top:10px;
+}
+article.projects img {
+    float:left;
+    margin-right:20px;
+    margin-top:15px;
+    width:100px;
+    height:100px;
+}
+
+article.projects div{
+    float:left;
+}
+div.infoleft {
+    width:320px;
+    margin-right:90px;
+}
+div.infoleft h2, div.infoleft h3, div.infoleft p {
+    float:left;
+}
+div.infoleft h2 {
+    margin-right:50px;
+}
+div.infoleft h3 {
+    margin-top:25px;
+}
+div.infoleft p {
+    margin-top:1px;
+}
+div.infocenter {
+    text-align:right;
+    margin-right:10px;
+}
+div.inforight {
+    width:235px;
+}
+div.iconsright {
+    float:left;
+    margin-left:13px;
+    margin-top:-10px;
+}
+div.iconsright img {
+    width:30px;
+    height:30px;
+    float:right;
+    clear:both;
+}
