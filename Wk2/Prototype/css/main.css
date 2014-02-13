@@ -315,6 +315,7 @@ div.iconsright img {
     height:50px;
     float:left;
     margin-left:40px;
+    margin-bottom:20px;
 
 
 }
@@ -322,10 +323,20 @@ form.shiftup {
     margin-top:-20px;
 }
 .modalDialog[alt="add"] div{
-    height:350px;
+    height:450px;
 }
 .modalDialog[alt="add"] div img{
     height:50px;
     width:50px;
     float:left;
+}
+
+/* Task Page Changes */
+section input[name="New Task +"].medium {
+    float:left;
+    margin-right:120px;
+    width:150px;
+}
+.modalDialog[alt="add"] p {
+    margin-left:40px;
 }
