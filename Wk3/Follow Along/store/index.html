@@ -1,0 +1,207 @@
+<!doctype html>  
+
+<!-- html5 boilerplate ~~ http://html5boilerplate.com/ -->
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Eclipse: JavaScript Community</title>
+	
+	<!-- put jquery UI CSS before ours -->
+
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.2.custom.min.css">
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<div id="container" class="store">
+		
+		<div id="header" class="cf">
+			<div class="logo"><a href="/"><span class="ir">Eclipse JavaScript Community</span></a></div>
+			
+			<div id="sitesearch">
+				<form method="get">
+					<input type="text" name="q" id="searchtext" value="search..." autocomplete="off" />
+					<input type="submit" id="searchsubmit" value="" />
+				</form>
+			</div>
+		</div>
+		
+		<ul id="nav" class="cf">
+			<li><a href="/">home</a></li>
+			<li><a href="/">tutorials</a>
+				<ul>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">AJAX</a></li>
+				</ul>
+			</li>
+			<li><a href="/">screencasts</a>
+				<ul>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">AJAX</a></li>
+				</ul>
+			</li>
+			<li><a href="/">projects</a></li>
+			<li><a href="store.html">store</a></li>
+			
+		</ul>
+		
+		<div id="contentwrap" class="round lshadow cf">
+		
+			<h1>Eclipse Merchandise</h1>
+
+			<p>Welcome to my awesome store.  Drag products that you like from this listing into your cart on the right, and click checkout when you're done!</p>
+			<p>All of our t-shirts are not only 100% awesome, but also 100% pure cotton!</p>
+				
+			<div class="greysep"></div>
+				
+			<div class="productitem cf">
+				<div class="photo"><img src="products/tshirt-0001.jpg" /></div>
+				<div class="info">
+					<div class="price">
+						<span class="listprice">$14.99</span>
+					</div>
+					<h4>jQuery Logo</h4>
+					<p class="kind">T-Shirt</p>
+					<p class="productid">#0001</p>
+					<p class="description">Flaunt your jQuery expertise in the most obvious way possible, with the official logo on your chest.</p>
+					<p class="description">Standard fit</p>
+				</div>
+			</div>
+			
+			<div class="productitem cf">
+				<div class="photo"><img src="products/tshirt-0002.jpg" /></div>
+				<div class="info">
+					<div class="price">
+						<span class="listprice">$19.99</span>
+					</div>
+					<h4>jQuery Method Cloud</h4>
+					<p class="kind">T-Shirt</p>
+					<p class="productid">#0002</p>
+					<p class="description">Why bother with jQuery cheat sheets when you could wear one?  Of course, it would be upside-down.</p>
+					<p class="description">Standard fit</p>
+				</div>
+			</div>
+			
+			<div class="productitem cf">
+				<div class="photo"><img src="products/tshirt-0003.jpg" /></div>
+				<div class="info">
+					<div class="price">
+						<span class="listprice">$17.99</span>
+					</div>
+					<h4>I.Love(jQuery)</h4>
+					<p class="kind">T-Shirt</p>
+					<p class="productid">#0003</p>
+					<p class="description">Running this shirt's method will automatically send a thank you email to John Resig.</p>
+					<p class="description">Standard fit</p>
+				</div>
+			</div>
+			
+			<div class="productitem cf">
+				<div class="photo"><img src="products/tshirt-0004.jpg" /></div>
+				<div class="info">
+					<div class="price">
+						<span class="listprice">$16.99</span>
+					</div>
+					<h4>Ipsum Lorem 4Ever</h4>
+					<p class="kind">T-Shirt</p>
+					<p class="productid">#0004</p>
+					<p class="description">You know you use it, so why try to deny it?  Proclaim your love for ipsum lorem proudly with this stylish branding shirt.</p>
+					<p class="description">Standard fit</p>
+				</div>
+			</div>
+			
+			<div class="productitem cf">
+				<div class="photo"><img src="products/tshirt-0005.jpg" /></div>
+				<div class="info">
+					<div class="price">
+						<span class="listprice">$59.99</span>
+					</div>
+					<h4>Chainmail</h4>
+					<p class="kind">T-Shirt</p>
+					<p class="productid">#0005</p>
+					<p class="description">When you're an amazing developer, you gotta protect yourself from danger.  This chainmail t-shirt will make sure you are still the only global variable.</p>
+					<p class="description">Kevlar fit</p>
+				</div>
+			</div>
+		
+		</div> <!-- /contentwrap -->
+		
+		
+		<!-- 
+			===============================
+			For jfollow:
+			Placeholder has id "#cartfollow"
+			Actual cart has id "#scart"
+			===============================
+		-->
+		<div id="cart-wrap">
+			<div id="cartfollow" style="height:0px; width:260px; float:right;"></div>
+			
+			<div class="sidepanel round lshadow" id="scart">
+				<h3 class="sidehead">Your Shopping Cart</h3>
+				<p>As you explore our products, you can add anything you like to your shopping cart by dragging them into the box below!</p>
+				<div class="cartdropbox">Drop Items Here</div>
+				<div class="cartitems cf">
+				
+					<!-- =======================
+						.emptycart should be removed if the cart is not empty 
+					-->
+					<div class="cartitem cf emptycart" rel="empty">
+						<span class="title">Your cart is currently empty.</span>
+					</div>
+					<!-- ======================= -->
+					
+					
+					<!-- =======================
+						.cartitem is an example of what a product's html should look like inside the cart.
+						Each time a product is dropped into the cart, you should build a new div using this html as a template.
+						Use the rel attribute to store the product's ID number.
+					-->
+					<!-- =======================
+					<div class="cartitem" rel="0001">
+						<span class="ui-state-default trashitem"><span class="ui-icon ui-icon-trash"></span></span>
+						<span class="title">Example (remove me)</span>
+						<input type="text" class="amount" value="1" />
+						<span class="price">$20.99</span><div class="clear"></div>
+					</div>
+					-->
+					<!-- ======================= -->
+					
+				</div>
+				<div id="clearcart"><a href="#">Empty your cart</a></div>
+			</div>
+	
+		</div> <!-- /cart-wrap -->
+		
+		<div class="clear"></div>
+		
+		<div id="footer">
+			<p>Eclipse Scripting For Web :: by SFW Development Team :: @ Full Sail University</p>
+		</div>
+		
+	</div>
+	
+	
+	<!-- javascript here -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<!-- jquery UI goes here -->
+	<script type="text/javascript" src="js/jquery.jfollow.js"></script> 
+	<script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+ 
+</body>
+</html>
