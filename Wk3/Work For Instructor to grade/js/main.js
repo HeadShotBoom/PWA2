@@ -32,7 +32,6 @@
             container.html(appCode);
 
             //loadProjects();
-            console.log(currentUser);
             $('#logout_btn').on('click', logout);
 
             if(currentUser.fname === ''){
