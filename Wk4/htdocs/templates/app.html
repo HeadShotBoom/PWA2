@@ -1,0 +1,243 @@
+<!-- 
+	Put the skeleton HTML for your Application here
+	DO NOT include <html>, <head>, or <body> tags
+	
+	Create a separate template for any repeatable components
+-->
+
+<div>
+
+	<script type="text/template" id="app_ui_template">
+	
+		<!-- core application skeleton html -->
+        <header>
+            <img src="../img/Logo.png" alt="Logo" class="mainlogo">
+            <div class="login">
+                <button id="logout_btn">Logout</button>
+                <p id="currentuser">Welcome {{:user_n}}</p>
+            </div>
+        </header>
+                <section>
+                    <a href="#openProjectModal"><input class="medium" type="button" name="New Project +" value="New Project +"></a>
+                    <h1 class="title">Projects</h1>
+                </section>
+
+                <div id="projectWrapper" name="sortable">
+
+                </div>
+
+        <footer>
+            <img src="../img/Logo.png" alt="Logo" class="mainlogo">
+            <ul>
+                <li><a href="http://www.google.com/intl/en/policies/terms/">Terms of Service</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/FAQ">FAQ</a></li>
+                <li><a href="mailto:DCarroll@fullsail.edu">Contact Us</a></li>
+                <li><a href="http://www.google.com/policies/privacy/">Privacy Policy</a></li>
+            </ul>
+            <img src="../img/social.png" alt="Social Media Icons">
+        </footer>
+	
+	</script>
+	
+	
+	<script type="text/template" id="template_task_link">
+	
+		<!-- repeatable html for task menu -->
+        <header>
+            <img src="../img/Logo.png" alt="Logo" class="mainlogo">
+            <div class="login">
+                <button id="logout_btn">Logout</button>
+                <button id="back">Back</button>
+                <p id="currentuser">Welcome {{:user_n}}</p>
+            </div>
+        </header>
+
+
+        <div id="taskWrapper" name="sortable">
+
+        </div>
+
+        <footer>
+            <img src="../img/Logo.png" alt="Logo" class="mainlogo">
+            <ul>
+                <li><a href="http://www.google.com/intl/en/policies/terms/">Terms of Service</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/FAQ">FAQ</a></li>
+                <li><a href="mailto:DCarroll@fullsail.edu">Contact Us</a></li>
+                <li><a href="http://www.google.com/policies/privacy/">Privacy Policy</a></li>
+            </ul>
+            <img src="../img/social.png" alt="Social Media Icons">
+        </footer>
+        <div id="openModal" class="modalDialog" alt="add">
+            <div id="taskmodal">
+                <a href="#close" title="Close" class="close">X</a>
+                <img id='saveTask' src="img/save.png" alt="save">
+                <h2 id="projectNameInTaskModal"></h2>
+                <form>
+                    <label for="tname">Task Name</label><br>
+                    <input id="tname" type="text" class="addproject">
+                </form>
+                <form>
+                    <label for="tdescription">Desctiption</label><br>
+                    <input id="tdescription" type="text" class="addproject">
+                </form>
+                <form>
+                    <label for="tclientname">Client Number</label><br>
+                    <input id="tclientname" type="text" class="addproject">
+                </form>
+                <form>
+                    <label for="tdue">Due Date</label><br>
+                    <input id="tdue" type="text" class="halfsize">
+                </form>
+                <form class="shiftup">
+                    <label for="tpriority">Priority</label><br>
+                    <input id="tpriority" type="text" class="halfsize" placeholder="High/Medium/Low">
+                </form>
+                <form id="tradiobuttons">
+                    <p>Status</p>
+                    <label for="tradiourgent">Urgent</label>
+                    <input type="radio" name="status" id="tradiourgent" value="urgent">
+                    <label for="tradioactive">Active</label>
+                    <input type="radio" name="status" id="tradioactive" value="active">
+                    <label for="tradiodelayed">Delayed</label>
+                    <input type="radio" name="status" id="tradiodelayed" value="delayed">
+                    <label for="tradiocomplete">Complete</label>
+                    <input type="radio" name="status" id="tradiocomplete" value="complete">
+                    <p id="getTheId" value="{{:id}}"></p>
+                </form>
+            </div>
+        </div>
+	</script>
+	
+	
+	<script type="text/template" id="template_task_view">
+	
+		<!-- repeatable html for full task data in list -->
+
+        <article class="tasks">
+            <div class="{{:status}}" alt="status">
+
+            </div>
+            <div class="infoleft">
+                <h3 class="pname inplace">{{:taskName}}</h3>
+                <p class="description inplace">{{:taskDescription}}</p>
+            </div>
+            <div class="infocenter">
+                <h4>Due By:</h4>
+            </div>
+            <div class="inforight">
+                <h4 class="due inplace">{{:dueDate}}</h4>
+                <h4 class="priority inplace">{{:updatedDate}}</h4>
+            </div>
+            <div class="iconsrighttask">
+                <img id="{{:projectID}}" class="handle" src="img/drag.png" alt="drag">
+                <img id='{{:id}}' class='trash' src="img/trash.png" alt="trash">
+            </div>
+        </article>
+	</script>
+
+    <script type="text/template" id="project-template">
+    <article class="projects">
+        <div class="{{:status}}">
+
+        </div>
+        <div class="infoleft">
+            <h3 class="pname inplace">{{:projectName}}</h3>
+            <h4>Client ID:</h4>
+            <h4 class="clientnum inplace">{{:clientID}}</h4>
+            <p class="description inplace" >{{:projectDescription}}</p>
+        </div>
+        <div class="infocenter">
+            <h4>Due By:</h4>
+            <h4>Priority:</h4>
+        </div>
+        <div class="inforight">
+            <h4 class="due inplace">{{:dueDate}}</h4>
+        </div>
+        <div class="iconsright">
+            <img class="handle" src="img/drag.png" alt="drag">
+            <img id='{{:id}}' class="trash" src="img/trash.png" alt="trash" value="TEST">
+        </div>
+        <a href="#openModal"><input id="addTaskPage_{{:id}}" class="medium" type="button" name="New Task +" value="New Task +"></a>
+        <input id="loadTaskPage_{{:id}}" class="medium" type="button" name="Tasks" value="Tasks">
+    </article>
+    <div id="openModal" class="modalDialog" alt="add">
+        <div id="taskmodal">
+            <a href="#close" title="Close" class="close">X</a>
+            <img id='saveTask' src="img/save.png" alt="save">
+            <h2>Add Tasks For Selected Project</h2>
+            <form>
+                <label for="name">Task Name</label><br>
+                <input id="tname" type="text" class="addproject">
+            </form>
+            <form>
+                <label for="description">Desctiption</label><br>
+                <input id="tdescription" type="text" class="addproject">
+            </form>
+            <form>
+                <label for="name">Client Number</label><br>
+                <input id="tclientname" type="text" class="addproject">
+            </form>
+            <form>
+                <label for="due">Due Date</label><br>
+                <input id="tdue" type="text" class="halfsize">
+            </form>
+            <form class="shiftup">
+                <label for="priority">Priority</label><br>
+                <input id="tpriority" type="text" class="halfsize" placeholder="High/Medium/Low">
+            </form>
+            <form id="tradiobuttons">
+                <p>Status</p>
+                <label for="tradiourgent">Urgent</label>
+                <input type="radio" name="status" id="tradiourgent" value="urgent">
+                <label for="tradioactive">Active</label>
+                <input type="radio" name="status" id="tradioactive" value="active">
+                <label for="tradiodelayed">Delayed</label>
+                <input type="radio" name="status" id="tradiodelayed" value="delayed">
+                <label for="tradiocomplete">Complete</label>
+                <input type="radio" name="status" id="tradiocomplete" value="complete">
+                <p id="getTheId" value="{{:id}}"></p>
+            </form>
+        </div>
+    </div>
+    <div id="openProjectModal" class="modalDialog" alt="add">
+        <div id="projectmodal">
+            <a href="#close" title="Close" class="close">X</a>
+            <img id='saveProject' src="img/save.png" alt="save">
+            <h2>Add New Project</h2>
+            <form>
+                <label for="name">Project Name</label><br>
+                <input id="pname" type="text" class="addproject">
+            </form>
+            <form>
+                <label for="description">Desctiption</label><br>
+                <input id="pdescription" type="text" class="addproject">
+            </form>
+            <form>
+                <label for="name">Client Number</label><br>
+                <input id="pclientname" type="text" class="addproject">
+            </form>
+            <form>
+                <label for="due">Due Date</label><br>
+                <input id="pdue" type="text" class="halfsize">
+            </form>
+            <form class="shiftup">
+                <label for="priority">Priority</label><br>
+                <input id="ppriority" type="text" class="halfsize" placeholder="High/Medium/Low">
+            </form>
+            <form id="pradiobuttons">
+                <p>Status</p>
+                <label for="pradiourgent">Urgent</label>
+                <input type="radio" name="status" id="pradiourgent" value="urgent">
+                <label for="pradioactive">Active</label>
+                <input type="radio" name="status" id="pradioactive" value="active">
+                <label for="pradiodelayed">Delayed</label>
+                <input type="radio" name="status" id="pradiodelayed" value="delayed">
+                <label for="pradiocomplete">Complete</label>
+                <input type="radio" name="status" id="pradiocomplete" value="complete">
+            </form>
+        </div>
+    </div>
+    </script>
+	<!-- more component templates here -->
+	
+</div>

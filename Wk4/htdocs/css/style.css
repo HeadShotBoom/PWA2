@@ -1,8 +1,5 @@
 /* Formatting for all pages */
 
-/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-/*html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}*/
-
 body {
     width:960px;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -49,10 +46,47 @@ div.login {
 
 }
 
-input[class='medium']{
+#login_btn, #logout_btn, #back {
     height:38px;
     width:100px;
     font-size: 100%;
+    background:#F3A683;
+    color:#2b3181;
+    border:none;
+    box-shadow: 4px 4px 5px #888888;
+    -webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+
+    -webkit-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+}
+#login_btn:hover, #logout_btn:hover, #back:hover{
+
+    background:#FF8282;
+    color:#0F451E;
+
+}
+
+#logout_btn, #back {
+    float:right;
+    margin-top:30px;
+    margin-right:20px;
+}
+
+#currentuser {
+    width:150px;
+    height:30px;
+    float:right;
+    color:#2b3181;
+    font-family: 'IM Fell French Canon SC', serif;
+    margin-right:15px;
+    margin-top:40px;
+    font-size: 120%;
+
 }
 
 footer ul {
@@ -80,11 +114,30 @@ input[type='button'], input[type='submit']{
     color:#2b3181;
     border:none;
     box-shadow: 4px 4px 5px #888888;
+    -webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+
+    -webkit-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+}
+
+input[type='button']:hover, input[type='submit']:hover{
+    background:#FF8282;
+    color:#0F451E;
+}
+
+.hidden{
+    display:none;
 }
 
 /*MODAL BOX ALL PAGES*/
 
 .modalDialog {
+
     position: fixed;
     top: 0;
     right: 0;
@@ -216,6 +269,10 @@ input[name="SIGN UP NOW!"] {
 }
 
 /* Modal Box for Welcome Page Customizations  */
+#projectmodal, #taskmodal{
+    height:535px;
+}
+
 .modalDialog div h2 {
     text-align: center;
 }
@@ -225,7 +282,7 @@ input[name="SIGN UP NOW!"] {
     height:50px;
     padding-left: 10px;
 }
-.modalDialog input[type=submit]{
+.modalDialog #signup_btn{
     background:#F3A683;
     color:#2b3181;
     border:none;
@@ -237,6 +294,21 @@ input[name="SIGN UP NOW!"] {
     font-size:150%;
     font-family: 'IM Fell French Canon SC', serif;
     box-shadow: 4px 4px 5px #444444;
+    -webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition: all 500ms cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+
+    -webkit-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+}
+
+.modalDialog #signup_btn:hover{
+
+    background:#FF8282;
+    color:#0F451E;
 }
 
 /* Projects page  */
@@ -250,57 +322,67 @@ section input[name="New Project +"].medium {
     margin-right:250px;
     width:150px;
 }
-article.projects {
+article.projects, article.tasks {
     width:920px;
-    height:130px;
+    height:150px;
     background-color: #9DD672;
-    padding:10px;
     overflow:hidden;
     margin-top:10px;
 }
 article.projects img {
     float:left;
-    margin-right:20px;
+    margin-right:30px;
     margin-top:15px;
+    margin-left:20px;
     width:100px;
     height:100px;
 }
 
-article.projects div{
+article.projects .iconsright {
+    margin-top:5px;
+    margin-bottom:-15px;
+}
+
+article.projects div, article.tasks div{
     float:left;
+    position:relative;
 }
 div.infoleft {
     width:320px;
-    margin-right:90px;
+    margin-right:50px;
+    height:100px;
 }
-div.infoleft h2, div.infoleft h3, div.infoleft p {
+div.infoleft h3, div.infoleft h4, div.infoleft p {
     float:left;
 }
-div.infoleft h2 {
-    margin-right:50px;
-}
 div.infoleft h3 {
-    margin-top:25px;
+    margin-right:50px;
+    width:175px;
+}
+div.infoleft h4 {
+    margin-top:20px;
+    margin-right:5px;
+    clear:right;
 }
 div.infoleft p {
     margin-top:1px;
+    font-size:75%;
 }
 div.infocenter {
     text-align:right;
     margin-right:10px;
 }
 div.inforight {
-    width:235px;
+    width:200px;
 }
 div.iconsright {
-    float:left;
-    margin-left:13px;
+    float:right;
+    margin-right:13px;
     margin-top:-10px;
 }
 div.iconsright img {
-    width:30px;
-    height:30px;
-    float:right;
+    width:50px;
+    height:50px;
     clear:both;
 }
 /* Modal for Projects Page */
@@ -342,4 +424,43 @@ section input[name="New Task +"].medium {
 }
 .modalDialog[alt="add"] p {
     margin-left:40px;
+}
+div.iconsrighttask {
+    float:right;
+    margin-left:33px;
+    margin-top: 10px;
+}
+article.tasks img {
+    float:left;
+    margin-right:30px;
+    margin-top:25px;
+    margin-left:20px;
+    width:100px;
+    height:100px;
+}
+div.iconsrighttask img {
+    width:50px;
+    height:50px;
+    clear:both;
+    margin-top:10px;
+}
+article.tasks div.infoleft h3 {
+   width:400px;
+}
+
+#projectWrapper, #taskWrapper {
+    margin-left:20px;
+}
+div.modalDialog h3 {
+    background-color:#000000;
+    color:#ffffff;
+    font-weight:bold;
+    text-align:center;
+}
+h5 {
+    width:250px;
+    float:left;
+    margin-right:-550px;
+    margin-left:300px;
+    margin-top:70px;
 }
